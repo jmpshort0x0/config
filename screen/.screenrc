@@ -1,0 +1,11 @@
+# Detach and Re-attach without losing the regions/windows layout  
+layout save default
+
+# large scrollback buffer
+defscrollback 5000
+
+# on split screen, switch window focus by clicking
+mousetrack on
+
+# refresh screen after closing a program
+altscreen on
