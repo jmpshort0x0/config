@@ -1,0 +1,17 @@
+filetype plugin indent on			    " turn on filetype recognition
+syntax on 							    " syntax highlighting
+set history=2500                        " 2500 buffer
+set backspace=start,eol,indent		    " set where backspace will function
+set hidden							    " allow buffers to be stored in the background so you can switch to different screens 
+set	noswapfile						    " disable swp files
+set incsearch						    " search as you type
+set showmatch                           " match parens
+set hls								    " highlight searches
+set nu                                  " show numbered lines
+set ruler                               " show position at the bottom right
+set path=.,**						    " set paths to include current file and folder and subdirectories
+set mouse=a							    " allow mouse interaction
+set clipboard=unnamed				    " allow saving to system clipboard
+
+let $RTP=split(&runtimepath, ',')[0]	" list of paths for vim xcmds
+let $RC="$HOME/.vim/vimrc"
