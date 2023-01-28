@@ -4,7 +4,7 @@ set colored-stats                 on   # Turn on completion colors.
 set colored-completion-prefix     on   # Color the typed completion prefix.
 set LS_COLORS=so=90:fi=97:di=93:ex=92:*.pdf=30;105:*.md=4
 
-# Some config setset LS_COLORS=so=90:fi=97:di=93:ex=92:*.pdf=30;105:*.md=4tings that only work in Clink.
+# Some config settings that only work in Clink.
 
 $if clink
 set search-ignore-case            on   # Case insensitive history searches.
