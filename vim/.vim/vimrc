@@ -3,7 +3,7 @@ syntax on 							    " syntax highlighting
 set history=2500                        " 2500 buffer
 set backspace=start,eol,indent		    " set where backspace will function
 set hidden							    " allow buffers to be stored in the background so you can switch to different screens 
-set	noswapfile						    " disable swp files
+set noswapfile						    " disable swp files
 set incsearch						    " search as you type
 set showmatch                           " match parens
 set hls								    " highlight searches
