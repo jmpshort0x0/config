@@ -1,12 +1,14 @@
-# Some common Readline config settings.
+# Readline config settings.
+set editing-mode 		vi      # set editing mode to vi
+set colored-stats                 on    # Turn on completion colors.
+set colored-completion-prefix     on    # Color the typed completion prefix.
+set expand-tilde		on	# expand ~ on windows
+set mark-directories 		on      # show directories as 
 
-set colored-stats                 on   # Turn on completion colors.
-set colored-completion-prefix     on   # Color the typed completion prefix.
-set LS_COLORS=so=90:fi=97:di=93:ex=92:*.pdf=30;105:*.md=4
-
-# Some config settings that only work in Clink.
-
-$if clink
-set search-ignore-case            on   # Case insensitive history searches.
-set completion-auto-query-items   on   # Prompt before showing completions if they'll exceed half the screen.
-$endif
+# keybindings
+"\C-x":clink-reload		
+"\eRubout":backward-kill-word	# ctrl+alt+backspace backward kill word
+"\C-w":unix-word-rubout		# kill from cursor to nearest word bkwd
+"\C-k":kill-line		# kill from cursor to end
+"\M-d":kill-word		# kill from cursor to word end
+"\C-c":kill-whole-line		# discards entire line
