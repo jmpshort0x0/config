@@ -12,3 +12,4 @@ set mark-directories 		on      # show directories as
 "\C-k":kill-line		# kill from cursor to end
 "\M-d":kill-word		# kill from cursor to word end
 "\C-c":kill-whole-line		# discards entire line
+"\e.":yank-last-arg             # similar to !$:p
