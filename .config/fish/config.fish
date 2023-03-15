@@ -6,7 +6,7 @@ set -Ux EDITOR vim
 
 function fish_prompt
 
-	if [ $(id -u) -eq 0 ]; then
+	if [ $(id -u) -eq 0 ]
 		set isRoot "💀"
 		set prefix_color "red"
 		set suffix "# "
