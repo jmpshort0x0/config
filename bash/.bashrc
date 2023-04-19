@@ -63,7 +63,7 @@ alias publicip='curl ifconfig.me'
 alias today='date +"%A, %B %d, %Y"'
 alias jsonpretty='function _jsonpretty() { python -m json.tool $1; }; _jsonpretty'
 alias encrypt='function _encrypt() { openssl enc -aes-256-cbc -pbkdf2 -a -salt -in $1 -out $2; }; _encrypt'
-alias decrypt='function _decrypt() { openssl enc -d -aes-256-cbc -in $1 -out $2; }; _decrypt'
+alias decrypt='function _decrypt() { openssl enc -d -aes-256-cbc -pbkdf2 -a -in $1 -out $2; }; _decrypt'
 
 
 if [[ $OSTYPE =~ solaris ]]; then
