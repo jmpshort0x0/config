@@ -23,6 +23,6 @@ function! PyInclude(fname)	                            																" convert
 		endif
 	endif
 	return substitute(l, '\.', '/', 'g') . 'py'
-  
+endfunction
 setlocal includeexpr=PyInclude(v:fname)														                      " include expression with filename as argument
 setlocal define=^\\s*\\<\\(def\\\|class\\)\\>               	
