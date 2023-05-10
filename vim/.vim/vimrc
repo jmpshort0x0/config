@@ -43,12 +43,16 @@ call plug#begin('~/.vim/plugged')
 " fzf plugin
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+" searching to enhance fzf
+Plug 'rking/ag.vim'
+Plug 'jremmen/vim-ripgrep'
+
 
 " Highlight yanked text
 Plug 'machakann/vim-highlightedyank'
 
-" Marker manager
-Plug 'kshenoy/vim-signature'
+" Marker manager - disabled due to fzf
+" Plug 'kshenoy/vim-signature'
 
 " Initialize plugin system
 " - Automatically executes `filetype plugin indent on` and `syntax enable`.
