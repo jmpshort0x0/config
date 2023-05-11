@@ -11,7 +11,7 @@ set nu                                  " show numbered lines
 set ruler                               " show position at the bottom right
 set path=.,**                           " set paths to include current file and folder and subdirectories
 set mouse=a				" allow mouse interaction
-set clipboard=unnamed		  	" allow saving to system clipboard
+set clipboard=unnamedplus		  	" allow saving to system clipboard, plus for compatibility with linux
 
 let $RTP=split(&runtimepath, ',')[0]	" list of paths for vim xcmds
 let $RC="$HOME/.vim/vimrc"
