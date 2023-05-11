@@ -30,7 +30,12 @@ else
   LSC="--color=auto"
 fi
 
-exists lsd && LS=lsd && LSC=
+#exists lsd && LS=lsd && LSC=
+if command -v lsd >/dev/null 2>&1; then
+    LS=lsd
+    LSC=
+fi
+
 
 alias dir="$LS -F $LSC"
 alias ls="$LS -F $LSC"
