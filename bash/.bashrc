@@ -65,7 +65,29 @@ alias jsonpretty="function _jsonpretty() { python -m json.tool $1; }; _jsonprett
 alias encrypt="function _encrypt() { openssl enc -aes-256-cbc -pbkdf2 -a -salt -in $1 -out $2; }; _encrypt"
 alias decrypt="function _decrypt() { openssl enc -d -aes-256-cbc -pbkdf2 -a -in $1 -out $2; }; _decrypt"
 
-# fzf shortcuts
+# fzf 
+# fzf ctrl-r and alt-c behavior
+export FZF_DEFAULT_COMMAND='fd --hidden --exclude ".git"' #requires fd to be installed
+#export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+#export FZF_DEFAULT_COMMAND='find . -type f ! -path "*git*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND --type d"
+export FZF_DEFAULT_OPTS="
+--layout=reverse
+--info=inline
+--height=80%
+--multi
+--preview-window=:hidden
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+--prompt='∼ ' --pointer='▶' --marker='✓'
+--bind '?:toggle-preview'
+--bind 'ctrl-a:select-all'
+--bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
+--bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
+--bind 'ctrl-v:execute(code {+})'
+"
+
 ### PROCESS
 # mnemonic: [K]ill [P]rocess
 # show output of "ps -ef", use [tab] to select one or multiple entries
