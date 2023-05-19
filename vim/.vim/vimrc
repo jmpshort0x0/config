@@ -6,6 +6,8 @@ set hidden				" allow buffers to be stored in the background so you can switch t
 set noswapfile    			" disable swp files
 set incsearch			      	" search as you type
 set showmatch                           " match parens
+set ignorecase
+set smartcase             "requires ignorecase, casesensitive if it has a capital
 set hls			                " highlight searches
 set nu                                  " show numbered lines
 set ruler                               " show position at the bottom right
