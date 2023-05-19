@@ -8,6 +8,7 @@ set incsearch			      	" search as you type
 set showmatch                           " match parens
 set ignorecase
 set smartcase             "requires ignorecase, casesensitive if it has a capital
+"set list             "show symbols
 set hls			                " highlight searches
 set nu                                  " show numbered lines
 set ruler                               " show position at the bottom right
