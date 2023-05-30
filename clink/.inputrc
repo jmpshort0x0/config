@@ -13,3 +13,6 @@ set mark-directories 		on      # show directories as
 "\M-d":kill-word		# kill from cursor to word end
 "\C-c":kill-whole-line		# discards entire line
 "\e.":yank-last-arg             # similar to !$:p
+"\C-e":end-of-line             #move to end of line
+"\eb":forward-word             #move to end of word or end of next word
+"\ef":backward-word            #move to beginning of word of beginning of prev word
