@@ -44,12 +44,13 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " fzf plugin
-Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 " searching to enhance fzf
 Plug 'rking/ag.vim'
 Plug 'jremmen/vim-ripgrep'
 
+" Bulk commenting
+Plug 'tpope/vim-commentary'
 
 " Highlight yanked text
 Plug 'machakann/vim-highlightedyank'
