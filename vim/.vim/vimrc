@@ -28,8 +28,12 @@ let $RC="$HOME/.vim/vimrc"
 " " - To learn more about preview window options, see `--preview-window`
 " section of `man fzf`.
 let g:fzf_preview_window = ['right,50%', 'ctrl-/']
-
-
+nnoremap <Leader>f :Files<cr>
+nnoremap <Leader>b :Buffers<cr>
+nnoremap <Leader>s :BLines<cr>
+nnoremap <Leader>w :Windows<cr>
+nnoremap <Leader>j :Jumps<cr>
+nnoremap <Leader>r :RG<cr>
 
 
 call plug#begin('~/.vim/plugged')
@@ -44,6 +48,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 " fzf plugin
+Plug 'junegunn/fzf', {  'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " searching to enhance fzf
 Plug 'rking/ag.vim'
