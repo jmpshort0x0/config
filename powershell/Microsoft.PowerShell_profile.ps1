@@ -14,6 +14,7 @@ if ($host.Name -eq 'ConsoleHost')
 		Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 		Set-PSReadLineKeyHandler -Key Ctrl+w -Function BackwardKillWord
 		Set-PSReadLineKeyHandler -Key Alt+d -Function KillWord
+  		Set-PSReadLineKeyHandler -Key Ctrl+d -Function DeleteChar
 		Set-PSReadLineKeyHandler -Key Ctrl+u -Function BackwardDeleteLine
 		Set-PSReadLineKeyHandler -Key Ctrl+k -Function DeleteToEnd
 		Set-PSReadLineKeyHandler -Key Alt+b -Function BackwardWord
