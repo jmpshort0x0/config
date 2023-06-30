@@ -1,4 +1,4 @@
-$POSH_THEMES_PATH = "C:\Users\<username>\AppData\Local\Programs\oh-my-posh\themes\"
+$env:POSH_THEMES_PATH = "C:\Users\<username>\AppData\Local\Programs\oh-my-posh\themes\"
 $env:FZF_CTRL_T_COMMAND = 'fd --hidden --exclude ".git"'
 $env:FZF_ALT_C_COMMAND = 'fd --hidden --type d --exclude ".git"'
 $env:FZF_ALT_C_OPTS = "--preview 'tree {}'"
