@@ -19,7 +19,10 @@ if ($host.Name -eq 'ConsoleHost')
 		Set-PSReadLineKeyHandler -Key Alt+b -Function BackwardWord
 		Set-PSReadLineKeyHandler -Key Alt+f -Function NextWord
 		Set-PSReadLineKeyHandler -Key Ctrl+a -Function BeginningOfLine
-		Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine
+		Set-PSReadLineKeyHandler -Key Ctrl+e -Function EndOfLine		
+  		Set-PSReadLineKeyHandler -Key Ctrl+b -Function BackwardChar
+		Set-PSReadLineKeyHandler -Key Ctrl+f -Function ForwardChar
+
 }
 
 Import-Module PSFzf
