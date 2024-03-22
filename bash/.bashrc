@@ -97,6 +97,7 @@ then
 fi
 
 ### PATH
+# ref: https://github.com/SidOfc/dotfiles
 # mnemonic: [F]ind [P]ath
 # list directories in $PATH, press [enter] on an entry to list the executables inside.
 # press [escape] to go back to directory listing, [escape] twice to exit completely
@@ -109,6 +110,7 @@ if [[ -d $loc ]]; then
 fi
 
 ### SERVER
+# ref: https://github.com/SidOfc/dotfiles
 # mnemonic: [K]ill [S]erver
 # show output of "lsof -Pwni tcp", use [tab] to select one or multiple entries
 # press [enter] to kill selected processes and go back to the process list.
