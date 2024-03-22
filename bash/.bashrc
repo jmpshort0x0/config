@@ -82,47 +82,6 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --height=80% --multi --p
 . /usr/share/doc/fzf/examples/key-bindings.bash
 
 
-### PROCESS
-# mnemonic: [K]ill [P]rocess
-# show output of "ps -ef", use [tab] to select one or multiple entries
-# press [enter] to kill selected processes and go back to the process list.
-# or press [escape] to go back to the process list. Press [escape] twice to exit completely.
-
-local pid=$(ps -ef | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='[kill:process]'" | awk '{print $2}')
-
-if [ "x$pid" != "x" ]
-then
-  echo $pid | xargs kill -${1:-9}
-  kp
-fi
-
-### PATH
-# ref: https://github.com/SidOfc/dotfiles
-# mnemonic: [F]ind [P]ath
-# list directories in $PATH, press [enter] on an entry to list the executables inside.
-# press [escape] to go back to directory listing, [escape] twice to exit completely
-
-local loc=$(echo $PATH | sed -e $'s/:/\\\n/g' | eval "fzf ${FZF_DEFAULT_OPTS} --header='[find:path]'")
-
-if [[ -d $loc ]]; then
-  echo "$(rg --files $loc | rev | cut -d"/" -f1 | rev)" | eval "fzf ${FZF_DEFAULT_OPTS} --header='[find:exe] => ${loc}' >/dev/null"
-  fp
-fi
-
-### SERVER
-# ref: https://github.com/SidOfc/dotfiles
-# mnemonic: [K]ill [S]erver
-# show output of "lsof -Pwni tcp", use [tab] to select one or multiple entries
-# press [enter] to kill selected processes and go back to the process list.
-# or press [escape] to go back to the process list. Press [escape] twice to exit completely.
-
-local pid=$(lsof -Pwni tcp | sed 1d | eval "fzf ${FZF_DEFAULT_OPTS} -m --header='[kill:tcp]'" | awk '{print $2}')
-
-if [ "x$pid" != "x" ]
-then
-  echo $pid | xargs kill -${1:-9}
-  ks
-fi
 
 
 # turn on grep color
