@@ -82,8 +82,6 @@ export FZF_DEFAULT_OPTS="--layout=reverse --info=inline --height=80% --multi --p
 . /usr/share/doc/fzf/examples/key-bindings.bash
 
 
-
-
 # turn on grep color
 if [[ $OSTYPE =~ solaris ]]; then
   alias grep="ggrep --color=always"
@@ -91,5 +89,18 @@ else
   alias grep="grep --color=always"
 fi
 
+
+
+### PATH
+# mnemonic: [F]ind [P]ath
+# list directories in $PATH, press [enter] on an entry to list the executables inside.
+# press [escape] to go back to directory listing, [escape] twice to exit completely
+fp() {
+  loc=$(echo $PATH | sed -e $'s/:/\\\n/g' |  fzf --header='[find:path]')
+  if [[ -d $loc ]]; then
+    echo "$(rg --files $loc | rev | cut -d"/" -f1 | rev)" | fzf --header="[find:exe] => ${loc}" >/dev/null
+    fp
+  fi
+}
 
 
