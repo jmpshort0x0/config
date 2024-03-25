@@ -1,3 +1,5 @@
+# prereqs: fzf ripgrep lsd batcat fd-find
+
 shopt -s cmdhist							# save all lines to history													
 shopt -s dotglob							# include . in filename
 shopt -s checkwinsize							# refresh terminal size for stdout
